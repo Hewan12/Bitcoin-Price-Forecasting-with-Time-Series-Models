@@ -8,9 +8,9 @@ This project aims to forecast Bitcoin prices using various time series models, i
 
 - [Overview](#overview)
 - [Models Used](#models-used)
-  - [ARIMA](#arima)
-  - [SARIMA](#sarima)
-  - [LSTM](#lstm)
+   - [LSTM](#lstm)
+   - [ARIMA](#arima)
+   - [SARIMA](#sarima)
 - [Dataset](#dataset)
 - [Evaluation Metrics](#evaluation-metrics)
 - [Results](#results)
@@ -18,6 +18,14 @@ This project aims to forecast Bitcoin prices using various time series models, i
 - [Contact](#contact)
 
 ## Models Used
+
+### LSTM
+
+LSTM (Long Short-Term Memory) is a type of Recurrent Neural Network (RNN) designed to learn and remember long-term dependencies in data. It is particularly useful for capturing complex, nonlinear patterns in time series data.
+
+**Model Specifications:**
+- LSTM is highly effective for time series forecasting tasks where long-term dependencies and nonlinear patterns are present.
+- The model can handle sequential data and learn complex relationships between past and future values, which is often seen in financial time series like Bitcoin prices.
 
 ### ARIMA
 
@@ -34,15 +42,7 @@ SARIMA (Seasonal ARIMA) extends ARIMA by adding seasonal components, making it s
 **Model Specifications:**
 - SARIMA is ideal for data that exhibits both trends and seasonality.
 - The model incorporates seasonal differencing, seasonal AR and MA terms, and seasonal periodicity to account for seasonal variations.
-
-### LSTM
-
-LSTM (Long Short-Term Memory) is a type of Recurrent Neural Network (RNN) designed to learn and remember long-term dependencies in data. It is particularly useful for capturing complex, nonlinear patterns in time series data.
-
-**Model Specifications:**
-- LSTM is highly effective for time series forecasting tasks where long-term dependencies and nonlinear patterns are present.
-- The model can handle sequential data and learn complex relationships between past and future values, which is often seen in financial time series like Bitcoin prices.
-
+  
 ## Dataset
 
 The dataset used in this project contains historical Bitcoin price data, with features like the closing price, date, and trading volume. The data was sourced from a publicly available Bitcoin price dataset on Kaggle and spans several years.
@@ -74,7 +74,7 @@ Where:
 ## Results
 
 ### RMSE Values:
-- **LSTM RMSE:** 5331.76 (lowest error and highest prediction accuracy)
+- **LSTM RMSE:** 2277.43 (lowest error and highest prediction accuracy)
 - **ARIMA RMSE:** 9652.53 (higher error than LSTM)
 - **SARIMA RMSE:** 10035.62 (highest error among the three)
 
@@ -86,17 +86,18 @@ Where:
 
 The following visualizations are included in the project:
 
-- **Heatmaps for Confusion Matrices**: 
-  - These heatmaps visualize the performance of the models by showing the confusion matrices. The color intensities indicate the number of correct and incorrect predictions made by the models. Users can assess model accuracy by looking for high values along the diagonal (correct predictions) and low values in off-diagonal cells (incorrect predictions).
+- **Heatmaps for Confusion Matrices**:
+  - These heatmaps visualize the performance of the models by showing the confusion matrices. The color intensities indicate the number of correct and incorrect predictions made by the models. You can assess model accuracy by looking for high values along the diagonal (correct predictions) and low values in off-diagonal cells (incorrect predictions).
 
-- **LSTM Forecast vs Actual**: 
-  - This plot compares the predicted Bitcoin prices from the LSTM model with the actual prices from the test data. By examining this visualization, users can see how closely the model's forecast matches real price movements over time. The closer the predicted values are to the actual values, the better the model's performance.
- 
-- **ARIMA Forecast vs Actual**: 
-  - This plot compares the predicted Bitcoin prices from the ARIMA model with the actual prices. Similar to the LSTM plot, users can evaluate the accuracy of the ARIMA model by observing how closely the forecast aligns with the true values. Any large deviations from the actual prices suggest areas where the ARIMA model is less accurate compared to LSTM.
+- **LSTM Model**:
+  - This plot compares the predicted Bitcoin prices from the LSTM model with the actual prices from the test data. By examining this visualization, we can see how closely the model's forecast matches real price movements over time. The closer the predicted values are to the actual values, the better the model's performance.
 
-- **SARIMA Forecast vs Actual**: 
-  - This plot compares the predicted Bitcoin prices from the SARIMA model with the actual prices. Similar to the LSTM plot, users can evaluate the accuracy of the SARIMA model by observing how closely the forecast aligns with the true values. Any large deviations from the actual prices suggest areas where the SARIMA model is less accurate compared to LSTM.
+- **ARIMA Forecast vs Actual Prices**:
+  - This plot compares the predicted Bitcoin prices from the ARIMA model with the actual prices. Similar to the LSTM plot, we can evaluate the accuracy of the ARIMA model by observing how closely the forecast aligns with the true values. Any large deviations from the actual prices suggest areas where the ARIMA model is less accurate compared to LSTM.
+
+- **SARIMA Forecast vs Actual Prices**:
+  - This plot compares the predicted Bitcoin prices from the SARIMA model with the actual prices. Similar to the LSTM plot, we can evaluate the accuracy of the SARIMA model by observing how closely the forecast aligns with the true values. Any large deviations from the actual prices suggest areas where the SARIMA model is less accurate compared to LSTM and ARIMA models.
+
 
 ## Conclusion
 
