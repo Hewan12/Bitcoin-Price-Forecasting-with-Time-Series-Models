@@ -74,7 +74,7 @@ Where:
 ## Results
 
 ### RMSE Values:
-- **LSTM RMSE:** 2277.43 (lowest error and highest prediction accuracy)
+- **LSTM RMSE:** 2594.77 (lowest error and highest prediction accuracy)
 - **ARIMA RMSE:** 9652.53 (higher error than LSTM)
 - **SARIMA RMSE:** 10035.62 (highest error among the three)
 
